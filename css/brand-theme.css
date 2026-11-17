@@ -1,0 +1,555 @@
+/**
+ * Thème Trésor Africain — disposition inspirée maquette organique
+ * Couleurs extraites du logo : marron, terracotta, olive, crème
+ */
+
+/* ─── Fond global — crème pleine, sans overlay transparent ─── */
+body {
+  background-color: var(--fond-principal);
+  color: var(--texte-fonce);
+}
+
+body::before,
+body::after {
+  display: none;
+  content: none;
+}
+
+/* ─── Barre info ─── */
+.info {
+  background: var(--marron-logo);
+  border-bottom: 2px solid var(--terre-logo);
+  color: var(--texte-sur-marron);
+  box-shadow: none;
+}
+
+/* ─── Navigation ─── */
+.nav-planete-gateau {
+  background: var(--blanc);
+  border-bottom: 2px solid var(--olive-douce);
+  box-shadow: 0 4px 16px #e8e0d6;
+}
+
+.nav-search-form {
+  box-shadow: none;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--olive-douce);
+  background: var(--blanc);
+}
+
+.nav-search-input {
+  border-color: transparent;
+  color: var(--marron-logo);
+}
+
+.nav-search-input::placeholder {
+  color: var(--texte-muted);
+}
+
+.nav-search-btn,
+.nav-compte-btn {
+  background: linear-gradient(135deg, var(--terre-logo) 0%, var(--terre-claire) 100%);
+  border-radius: var(--radius-pill);
+}
+
+.nav-search-btn:hover,
+.nav-compte-btn:hover {
+  background: linear-gradient(135deg, var(--marron-logo) 0%, var(--terre-logo) 100%);
+}
+
+.nav-panier-link {
+  color: var(--marron-logo);
+}
+
+.nav-panier-link:hover {
+  color: var(--terre-logo);
+}
+
+.nav-panier-badge {
+  background: var(--olive-logo);
+  box-shadow: 0 2px 10px rgba(142, 143, 71, 0.4);
+}
+
+.containernav a,
+.nav-categories a,
+nav .containernav li a {
+  color: var(--marron-logo);
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+.containernav a:hover,
+.nav-categories a:hover,
+nav .containernav li a:hover {
+  color: var(--terre-logo);
+  background: var(--surface-terre-soft);
+}
+
+/* ─── Bannière services (style maquette — cartes flottantes) ─── */
+.services-banner {
+  padding: 20px 20px 8px;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.services-banner-slider {
+  margin: 0 auto 16px !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.services-banner-inner {
+  margin-top: 0;
+  background: var(--surface-card);
+  border: 2px solid var(--olive-douce);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  box-shadow: none;
+}
+
+.service-icon {
+  background: var(--surface-olive-soft);
+  color: var(--olive-logo);
+  border: 2px solid var(--olive-claire);
+  box-shadow: none;
+}
+
+.service-item h3 {
+  color: var(--marron-logo);
+}
+
+.service-item p {
+  color: var(--texte-muted);
+}
+
+.service-divider {
+  background: var(--olive-douce);
+}
+
+/* ─── Carrousel catégories — juste sous la bannière services ─── */
+.categorie-section-wrap {
+  padding: 4px 20px 24px;
+  margin-top: 0;
+}
+
+.categorie-label {
+  color: var(--marron-logo) !important;
+  font-weight: 600;
+}
+
+.categorie-circle {
+  border-color: var(--olive-claire) !important;
+  background: var(--blanc) !important;
+  box-shadow: none;
+}
+
+.categorie-link:hover .categorie-circle {
+  border-color: var(--terre-logo) !important;
+  box-shadow: none;
+}
+
+.brand-wave-divider {
+  display: block;
+  width: 100%;
+  height: 28px;
+  margin: 8px 0;
+  background: var(--motif-vagues) repeat-x center;
+  background-size: 120px 28px;
+  border: none;
+  opacity: 1;
+}
+
+/* ─── Titres de section ─── */
+.produit_vedete .box1,
+.produit_vedetes .box1 {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.produit_vedete .box1 h1,
+.produit_vedetes .box1 h1,
+.section5 h1,
+.produit_vedete-populaires > h1 {
+  color: var(--marron-logo);
+  font-family: var(--font-titres);
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section5 h1,
+.produit_vedete-populaires > h1 {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 20px 0;
+  display: inline-flex;
+}
+
+.section5 h1::before,
+.section5 h1::after,
+.produit_vedete-populaires > h1::before,
+.produit_vedete-populaires > h1::after,
+.produit_vedete .box1 h1::before,
+.produit_vedete .box1 h1::after,
+.produit_vedetes .box1 h1::before,
+.produit_vedetes .box1 h1::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: var(--motif-feulle) center / contain no-repeat;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.section5 h1::after,
+.produit_vedete-populaires > h1::after,
+.produit_vedete .box1 h1::after,
+.produit_vedetes .box1 h1::after {
+  transform: scaleX(-1);
+}
+
+.produit_vedete .box1 span,
+.produit_vedetes .box1 span {
+  height: 3px;
+  background: var(--olive-claire);
+  border-radius: var(--radius-pill);
+  flex: 1;
+  max-width: 100px;
+}
+
+/* ─── Sections produits — base ─── */
+.produit_vedete,
+.produit_vedetes,
+.section00,
+.section5 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.produit_vedete,
+.produit_vedetes {
+  padding: 32px 0 40px;
+}
+
+/* Ancien fond générique désactivé — blocs par section */
+.produit_vedete::before,
+.produit_vedetes::before {
+  display: none;
+}
+
+.produit_vedete > *,
+.produit_vedetes > *,
+.section00 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── NOUVEAUTÉS ─── */
+.produit_vedete-nouveautes {
+  background: var(--creme-logo);
+}
+
+/* ─── POPULAIRES — même style que Top Catégories ─── */
+.produit_vedete-populaires {
+  padding: 24px 0 40px;
+  margin: 0;
+  background: var(--creme-logo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.produit_vedete-populaires::before,
+.produit_vedete-populaires::after {
+  display: none;
+  content: none;
+}
+
+/* ─── TOUS LES PRODUITS — cadre = conteneur réel ─── */
+.section00 {
+  padding: 40px clamp(10px, 2.5vw, 20px) 48px;
+  margin: 8px 0 24px;
+  background: var(--creme-logo);
+  box-sizing: border-box;
+}
+
+.section00 .box1 h1 {
+  color: var(--marron-logo);
+}
+
+.section00 .produit_vedetes {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 28px) clamp(12px, 2.5vw, 24px) clamp(22px, 3vw, 32px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.section00 .produit_vedetes::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  left: 0;
+  right: 0;
+  transform: none;
+  width: 100%;
+  background: var(--creme-chaud);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--olive-douce);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section00 .produit_vedetes > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section00 .produit_vedetes .box1 {
+  max-width: 100%;
+  padding: 0 0 8px;
+  margin: 0 0 8px;
+}
+
+.section00 .produit_vedetes .articles.produits-grid-4,
+.section00 .produit_vedetes .carousel11.produits-grid-4 {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 8px !important;
+}
+
+.section5 {
+  padding: 24px 0 40px;
+  background: var(--creme-logo);
+}
+
+.section5 h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.section5 .slider {
+  border: 2px solid var(--olive-douce);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.section5 .slider .box h4 {
+  background: var(--marron-logo);
+}
+
+.section5 .slider .box a {
+  background: linear-gradient(135deg, var(--terre-logo) 0%, var(--terre-claire) 100%);
+  border-radius: var(--radius-pill);
+}
+
+.section5 .slider .box a:hover {
+  background: linear-gradient(135deg, var(--olive-logo) 0%, var(--olive-claire) 100%);
+}
+
+/* ─── Cartes produits ─── */
+.produit_vedete .articles .carousel,
+.produit_vedetes .articles .carousel,
+.carousel11 .carousel,
+.carousel1-flex-mode .carousel {
+  border-radius: var(--radius-md);
+  border: 2px solid var(--olive-douce);
+  box-shadow: none;
+  background: var(--surface-card);
+  overflow: hidden;
+}
+
+.produit_vedete .articles .carousel:hover,
+.produit_vedetes .articles .carousel:hover,
+.carousel11 .carousel:hover,
+.carousel1-flex-mode .carousel:hover {
+  border-color: var(--terre-logo);
+  box-shadow: none;
+  transform: translateY(-4px);
+}
+
+.produit_vedete .articles .carousel #ville,
+.produit_vedetes .articles .carousel #ville,
+.carousel11 .carousel #ville {
+  display: none !important;
+}
+
+/* Boutons panier */
+.produit_vedete .articles .carousel .btn-add-cart,
+.produit_vedetes .articles .carousel .btn-add-cart,
+.carousel11 .carousel .btn-add-cart,
+.carousel1-flex-mode .carousel .btn-add-cart,
+.produits-grid-4 .carousel .btn-add-cart,
+.produits-visites-grid .carousel .btn-add-cart {
+  background: linear-gradient(135deg, var(--terre-logo) 0%, var(--terre-claire) 100%);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  color: var(--blanc);
+  box-shadow: none;
+}
+
+.produit_vedete .articles .carousel .btn-add-cart:hover,
+.produit_vedetes .articles .carousel .btn-add-cart:hover,
+.carousel11 .carousel .btn-add-cart:hover,
+.carousel1-flex-mode .carousel .btn-add-cart:hover,
+.produits-grid-4 .carousel .btn-add-cart:hover,
+.produits-visites-grid .carousel .btn-add-cart:hover {
+  background: linear-gradient(135deg, var(--marron-logo) 0%, var(--terre-logo) 100%);
+  box-shadow: 0 6px 18px rgba(199, 98, 42, 0.28);
+}
+
+.produit-badge-nouveau {
+  background: linear-gradient(135deg, var(--olive-logo) 0%, var(--terre-logo) 100%) !important;
+}
+
+.btn-product-action {
+  color: var(--marron-logo);
+}
+
+.btn-product-favori.is-favori,
+.btn-product-favori.is-favori:hover {
+  background: var(--terre-logo);
+  color: var(--blanc);
+}
+
+/* ─── Bannières promo section4 ─── */
+.section4-promo-grid .promo-banner {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--ombre-douce);
+}
+
+.promo-banner__surtitre,
+.promo-banner__titre {
+  color: var(--marron-logo);
+}
+
+.promo-banner__btn--solid {
+  background: var(--marron-logo);
+  border-color: var(--marron-logo);
+  border-radius: var(--radius-pill);
+}
+
+.promo-banner__btn--solid:hover {
+  background: var(--terre-logo);
+  border-color: var(--terre-logo);
+}
+
+.promo-banner__btn--outline {
+  color: var(--marron-logo);
+  border-color: var(--marron-logo);
+  border-radius: var(--radius-pill);
+}
+
+/* ─── Slider principal ─── */
+.slider-area .slider-item .box {
+  background: var(--marron-logo);
+}
+
+.slider-area .slider-item button {
+  background: linear-gradient(135deg, var(--terre-logo) 0%, var(--olive-logo) 100%);
+  border-color: var(--blanc);
+  border-radius: var(--radius-pill);
+}
+
+/* Footer — voir css/footer.css */
+.footer {
+  background: var(--blanc);
+}
+
+.footer_bottom {
+  background: var(--marron-fonce);
+}
+
+/* ─── Boutons globaux ─── */
+.btn-voir-tous-produits,
+.voir-tous-produits-wrapper a,
+.btn-voir-plus-index {
+  background: linear-gradient(135deg, var(--marron-logo) 0%, var(--terre-logo) 100%) !important;
+  border-radius: var(--radius-pill) !important;
+  color: var(--blanc) !important;
+  box-shadow: var(--ombre-promo);
+  border: none;
+}
+
+.btn-voir-tous-produits:hover,
+.btn-voir-plus-index:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--terre-logo) 0%, var(--olive-logo) 100%) !important;
+}
+
+/* ─── Pages catalogue / promo / panier ─── */
+.section00.produit_vedete-nouveautes .produit_vedetes::before {
+  display: none;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--creme-logo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--olive-logo), var(--terre-logo));
+  border-radius: var(--radius-pill);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .produit_vedete .box1 h1,
+  .produit_vedetes .box1 h1,
+  .section5 h1 {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    gap: 8px;
+  }
+
+  .produit_vedete .box1 h1::before,
+  .produit_vedetes .box1 h1::before,
+  .produit_vedete .box1 h1::after,
+  .produit_vedetes .box1 h1::after,
+  .section5 h1::before,
+  .produit_vedete-populaires > h1::before,
+  .produit_vedete-populaires > h1::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .section00 .produit_vedetes {
+    padding: 16px 12px 20px;
+  }
+
+  .section00 .produit_vedetes::before {
+    width: 100%;
+    border-radius: var(--radius-lg);
+  }
+
+  .services-banner-inner {
+    border-radius: var(--radius-lg);
+    padding: 20px 16px;
+  }
+}

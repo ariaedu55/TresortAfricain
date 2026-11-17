@@ -1,0 +1,84 @@
+/**
+ * Palette Trésor Africain — extraite du logo officiel
+ * Marron profond | Terracotta | Olive | Crème
+ */
+
+:root {
+  /* Couleurs logo */
+  --marron-logo: #502816;
+  --marron-fonce: #3d1e11;
+  --terre-logo: #c7622a;
+  --terre-claire: #d4844f;
+  --terre-douce: #e8b08a;
+  --olive-logo: #8e8f47;
+  --olive-claire: #a8ad6d;
+  --olive-douce: #c5c9a0;
+  --sage-logo: #6b7340;
+  --creme-logo: #faf7f2;
+  --creme-chaud: #f5efe6;
+  --blanc: #ffffff;
+  --noir: #1a120c;
+
+  /* Surfaces — couleurs pleines (sans transparence) */
+  --surface-page: #faf7f2;
+  --surface-card: #ffffff;
+  --surface-olive-soft: #e8ead5;
+  --surface-olive-block: #8e8f47;
+  --surface-olive-block-deep: #7a7b3f;
+  --surface-terre-soft: #f3e4d8;
+  --surface-marron-soft: #efe6e0;
+  --surface-marron-block: #502816;
+
+  /* Alias historiques (compatibilité) */
+  --dore-secondaire: #8e8f47;
+  --terre-principale: #c7622a;
+  --marron-accent: #502816;
+  --rose: #c7622a;
+  --jaune-wilton: #8e8f47;
+  --beige-creme: #faf7f2;
+  --turquoise: #8e8f47;
+  --orange: #c7622a;
+
+  /* Texte */
+  --texte-fonce: #1a120c;
+  --texte-clair: #ffffff;
+  --texte-muted: #6b5a4a;
+  --texte-sur-olive: #faf7f2;
+  --texte-sur-marron: #ffffff;
+
+  /* Rôles UI */
+  --fond-principal: var(--surface-page);
+  --couleur-dominante: var(--terre-logo);
+  --couleur-secondaire: var(--olive-logo);
+  --boutons-secondaires: var(--olive-logo);
+  --accent-promo: var(--terre-logo);
+  --titres: var(--marron-logo);
+
+  /* Surfaces UI */
+  --glass-bg: #ffffff;
+  --glass-border: #d9cfc4;
+  --glass-shadow: 0 12px 40px rgba(80, 40, 22, 0.08);
+
+  /* Ombres */
+  --ombre-douce: 0 8px 28px rgba(80, 40, 22, 0.08);
+  --ombre-card: 0 14px 36px rgba(80, 40, 22, 0.1);
+  --ombre-promo: 0 6px 22px rgba(199, 98, 42, 0.28);
+  --ombre-gourmande: 0 16px 42px rgba(80, 40, 22, 0.14);
+  --ombre-bloc: 0 24px 64px rgba(80, 40, 22, 0.12);
+
+  /* Formes organiques */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  /* Typographie */
+  --font-titres: 'Nunito', 'Quicksand', sans-serif;
+  --font-corps: 'Quicksand', 'Nunito', sans-serif;
+
+  /* Motifs décoratifs */
+  --motif-vagues: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='24' viewBox='0 0 120 24'%3E%3Cpath d='M0 12 Q15 0 30 12 T60 12 T90 12 T120 12' fill='none' stroke='%23502816' stroke-width='1.2' opacity='0.2'/%3E%3Cpath d='M0 18 Q15 8 30 18 T60 18 T90 18 T120 18' fill='none' stroke='%23c7622a' stroke-width='1' opacity='0.15'/%3E%3C/svg%3E");
+  --motif-tribal: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23502816' stroke-width='1' opacity='0.06'%3E%3Cpath d='M0 20 L10 10 L20 20 L30 10 L40 20'/%3E%3Cpath d='M0 30 L10 20 L20 30 L30 20 L40 30'/%3E%3C/g%3E%3C/svg%3E");
+  --motif-feulle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%238e8f47' d='M12 2C8 6 4 8 4 14c0 3.3 2.7 6 6 6 1.5 0 2.9-.5 4-1.5 1.1 1 2.5 1.5 4 1.5 3.3 0 6-2.7 6-6 0-6-4-8-8-12-1.2 1.5-2.4 2.5-4 2.5S13.2 3.5 12 2z'/%3E%3C/svg%3E");
+}
